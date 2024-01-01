@@ -1,0 +1,508 @@
+$write:1.2rem;
+
+@mixin subheading($mb,$fs){
+  color:white;
+  font-size:$fs;
+  margin-bottom:$mb;
+}
+
+@mixin certificates($mt){
+  margin-top:$mt;
+  height:70vh;
+  width:48vw;
+}
+
+@mixin parent{
+  display:flex;
+  margin-top:6em;
+  margin-left:3em;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #1a1a1d;
+}
+    /*                  home and navbar                           */
+
+.firstname{
+  color:white;
+}
+
+.parent {
+  height: 100vh;
+  width: 100vw;
+}
+
+#main-img{
+  z-index:0;
+  margin-top:0;
+  width: 100%;
+  height: 99%;
+  object-fit: cover;
+}
+
+.navbarr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  border-radius:1%;
+  margin-top:0;
+}
+
+.nav-1{
+  float:left;
+  font-weight:lighter;
+  font-size:1.7em;
+  padding:1em;
+}
+
+.nav-2{
+  float:right;
+  display:flex;
+  justify-content: space-evenly;
+  list-style:none;
+  margin-top:1.5em;
+  padding:1em;
+  cursor:pointer;
+}
+.nav-elements{
+  margin-left:1em;
+  margin-right:1em;
+  font-size:1.5em;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration:none;
+  font-weight: bold;
+  color:white;
+  border:solid 0.1rem white;
+  background-color:transparent;
+  padding:0.6rem;
+  border-radius:10%;
+  letter-spacing: 0.1rem;
+  &:hover{
+   border-color:rgb(241, 241, 17);
+   transform:scale(1.1);
+  }
+}
+
+
+.headings {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  margin-top:2rem;
+}
+
+.heading-1{
+@include subheading(0.6rem,3.5rem);
+}
+
+.heading-2{
+  @include subheading(1.1rem,3.5rem);
+}
+.quote{
+  @include subheading(0.1rem,2rem);
+}
+.caste{
+  color:rgb(241, 241, 17);
+}
+.caste-1{
+  color:#ffd700;
+}
+
+
+
+/*   ------------------                  skills        ---------------------------------          */
+
+
+.skills-heading{
+  margin-top:2.5rem;
+  font-size:3rem;
+  margin-bottom:2rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing:0.1rem;
+  text-align:center;
+color:white;
+}
+.skills-pic{
+  margin-top:0;
+  width:100vw;
+  height:90vh;
+}
+
+/*  --------------------------      about me -------------------------------*/
+
+
+
+.parent-about{
+@include parent;
+}
+
+.mypic{
+  height:90vh;
+  width:35vw;
+  border-radius:20%;
+  &:hover{
+    border:solid 0.2rem white;
+    transform: translate(-1);
+  }
+}
+.write-aboutme{
+  padding:5rem;
+  padding-top:0;
+  padding-bottom:2rem;
+  letter-spacing:0.1rem;
+  line-height:1.8rem;
+  border-radius:10%;
+  margin:5rem;
+  color:white;
+  margin-top:0;
+  background-color: #1a1a1d;
+  border:2px solid rgb(241, 241, 17);
+ 
+
+ 
+
+  .write-para{
+    margin-top:1.5rem;
+    font-size:$write;
+
+  }
+}
+/*    -----------------------------------------  contact ------------------ */
+
+
+
+.contact-heading{
+  color:white;
+  margin-top:0;
+  cursor:pointer;
+  font-size:2rem;
+  padding:1rem;
+}
+
+.contact-parent{
+  border-top:solid 0.2rem white;
+  display:flex;
+  justify-content: space-between;
+}
+.timer{
+  font-size:2rem;
+  padding:1rem;
+  margin-top:0;
+}
+
+.reachme-btn{
+  display:flex;
+  justify-content: space-between;
+  
+  & h1{
+    margin-left:12rem;
+    font-size:2.5rem;
+  }
+
+}
+.cross-btn{
+  border:solid 0.2rem black;
+  margin-right:2.5rem;
+  padding:0.4rem;
+  cursor:pointer;
+  &:hover{
+    border-color:rgb(241, 241, 17);
+  }
+
+}
+  .container{
+  
+    position: fixed;
+    display: none;
+    height:75vh;
+    width:50vw;
+    border-radius:15%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white; 
+    opacity: 70%;
+    box-shadow: 0 4px 8px rgba(0, 1, 1, 0.5);
+    z-index: 999;
+    padding:0.5rem;
+    padding-top:4rem;
+    margin-bottom:1rem;
+  }
+
+  .parent-logo{
+    display:flex;
+    align-items: center;
+  }
+  .logo-child{
+    color:black;
+    text-decoration: none;
+
+    & h1:hover{
+        color:#ffd700;
+        transform:scale(1.1);
+        border:solid 0.1rem black;
+        padding:0.5rem;
+    }
+  }
+
+
+  .logos{
+    height:12vh;
+    width:8vw;
+    margin:2.5rem 2rem; 
+    margin-right:10em;  
+    &:hover{
+      transform:scale(1.2);
+    }
+  }
+
+
+  /* ----------------   certificate   -------------- */
+
+
+  .certif{
+    @include certificates(0);
+  }
+ 
+
+  .certif-heading{
+    text-align: center;
+    font-size:3rem;
+    margin-top:3rem;
+    margin-bottom:0;
+    color:white;
+    border:solid 0.2rem white;
+    padding:0.5rem;
+  }
+
+  .card{
+    border:2px solid rgb(241, 241, 17);
+    border-radius:10%;
+    padding:1.5rem;
+    margin:2rem;
+    font-size:$write;
+    color:white;
+    letter-spacing: 0.1rem;
+    line-height:1.8rem;
+    font-family:monospace;
+  }
+
+  .container-2{
+    display:flex;
+    justify-content:space-evenly;
+    margin-top:8rem;
+  }
+
+/* ----------------      animations -----------------------*/
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.35rem;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.50s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .heading-3{
+    position: absolute;
+    bottom: 80%;
+    left: 7%;
+    transform: translateY(50%);
+    font-size:9rem;
+    letter-spacing: 0.6rem;
+  }
+  
+
+
+  .waviy {
+    position: relative;
+    cursor:pointer;
+  
+  
+    span {
+      font-family: 'Alfa Slab One', cursive;
+      position: relative;
+      display: inline-block;
+      color:white;
+      text-transform: uppercase;
+      animation: waviy 1.5s infinite;
+      animation-delay: calc(.1s * var(--i));
+    }
+  
+    @keyframes waviy {
+      0%, 40%, 100% {
+        transform: translateY(0);
+      }
+      20% {
+        transform: translateY(-20px);
+      }
+    }
+  }
+  
+
+  #scroll-container {
+    font-size:2rem;
+    width:100vw;
+    border-radius: 5px;
+    overflow: hidden;
+    position:absolute;
+    top:180%;
+    right:-35%;
+  
+    #scroll-text {
+    
+      transform: translateX(100%);
+      animation: my-animation 15s linear infinite;
+      color:white;
+    }
+  }
+  
+
+  @keyframes my-animation {
+    0% {
+      transform: translateX(100%);
+    }
+    25% {
+      transform: translateX(50%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    75% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .line{
+    color:white;
+    margin-top:8rem;
+    margin-bottom:0;
+    height:0.6rem;
+    background-color:white;
+  }
+
+  /* --------------------------          work          ----------------------*/
+
+  .work-parent{
+  @include parent;
+  margin-bottom:4rem;
+  
+
+  .work-img{
+height:80vh;
+width:45vw;
+border-radius:5%;
+  }
+}
+
+.contact-form {
+  width: 49%;
+  height:100%;
+  margin-top: 0;
+  margin-left:2rem;
+  color:white;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      margin-bottom: 2rem;
+     
+      overflow: hidden;
+      display: block;
+      clear: both;
+      position: relative;
+    }
+
+    li.half {
+      width: 49%;
+      margin-left: 2%;
+      float: left;
+      clear: none;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  input[type='text'],
+  input[type='email'] {
+    width: 100%;
+    background: #1a1a1d;
+    height: 3rem;
+    font-size: $write;
+    color: white;
+    padding: 0 1.3rem;
+    box-sizing: border-box;
+    border:solid 0.1rem white;
+  }
+
+  textarea {
+    width: 100%;
+    border: 0;
+    background: #1a1a1d;
+    height: 2rem;
+    font-size: 1.5rem;
+    color: white;
+    border:solid 0.1rem white;
+    padding-bottom:10rem;
+    padding-top:2rem;
+    padding-left:2rem;
+    box-sizing: border-box;
+  }
+
+  .flat-button {
+    color: white;
+    font-size: 1rem;
+    letter-spacing:0.2em;
+    text-decoration: none;
+    padding: 1rem 1rem;
+    border: 1px solid #ffd700;
+    float: left;
+    border-radius: 4px;
+    background: 0 0;
+    text-transform: uppercase;
+    float: right;
+    text-align: center;
+    margin-right: 10px;
+    &:hover{
+      border-color:white;
+    }
+  }
+}
+
+.work-heading{
+  @include subheading(3rem,3rem );
+}
